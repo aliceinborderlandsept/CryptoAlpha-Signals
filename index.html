@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoAlpha Signals - Join 28,500+ Traders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .community-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .community-header h1 {
+            color: #2a5298;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .community-header .tagline {
+            color: #666;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #e1e5e9;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2a5298;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .proof-section {
+            background: #fffaf0;
+            border: 1px solid #ffd700;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .proof-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .proof-header h3 {
+            color: #2a5298;
+            margin-left: 10px;
+            font-size: 1.1em;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 3px solid #2a5298;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #2a5298;
+            margin-top: 5px;
+            font-size: 0.85em;
+        }
+
+        .benefit-box {
+            background: #f8f9ff;
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .benefit-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefit-box li {
+            padding: 5px 0;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .benefit-box li:before {
+            content: "✓";
+            color: #2a5298;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+
+        .wallets-section {
+            margin: 20px 0;
+        }
+
+        .wallets-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .wallet-option {
+            position: relative;
+        }
+
+        .wallet-option input {
+            display: none;
+        }
+
+        .wallet-option label {
+            display: block;
+            padding: 10px 5px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 0.85em;
+            margin: 0;
+        }
+
+        .wallet-option input:checked + label {
+            background: #2a5298;
+            color: white;
+            border-color: #2a5298;
+        }
+
+        .wallet-option label:hover {
+            border-color: #2a5298;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #2a5298;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #2a5298;
+            margin: 10px 0;
+        }
+
+        .privacy-note {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .experience-level {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .exp-option {
+            flex: 1;
+        }
+
+        .exp-option input {
+            display: none;
+        }
+
+        .exp-option label {
+            display: block;
+            padding: 10px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 500;
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .exp-option input:checked + label {
+            background: #2a5298;
+            color: white;
+            border-color: #2a5298;
+        }
+
+        @media (max-width: 768px) {
+            .wallets-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wallets-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-level {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="community-header">
+            <h1>CryptoAlpha Signals</h1>
+            <p class="tagline">Where Smart Money Meets Smart Trading</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">28,500+</span>
+                <span class="stat-label">Active Traders</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">72%</span>
+                <span class="stat-label">Success Rate</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.8/5</span>
+                <span class="stat-label">Rating</span>
+            </div>
+        </div>
+
+        <div class="proof-section">
+            <div class="proof-header">
+                <span style="font-size: 1.2em;">⭐</span>
+                <h3>Real Members, Real Results</h3>
+            </div>
+            <div class="testimonial">
+                "Joined CryptoAlpha 3 months ago. Their ETH signal made me $2,800 profit in 2 weeks. Best decision ever!"
+                <div class="author">- Michael R., Day Trader</div>
+            </div>
+            <div class="testimonial">
+                "The community support is incredible. Learned more in 1 month here than 1 year of YouTube tutorials."
+                <div class="author">- Sarah L., Crypto Beginner</div>
+            </div>
+        </div>
+
+        <div class="benefit-box">
+            <ul>
+                <li>3-5 high-quality signals per week</li>
+                <li>24/7 Telegram community support</li>
+                <li>Risk management guidance</li>
+                <li>Weekly market analysis reports</li>
+                <li>Early coin listing alerts</li>
+            </ul>
+        </div>
+
+        <form id="cryptoForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+    <label for="phone">Phone Number</label>  <!-- ✅ (Optional) hata do -->
+    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>  <!-- ✅ required add karo -->
+</div>
+
+            <div class="form-group">
+                <label>Your Crypto Experience Level</label>
+                <div class="experience-level">
+                    <div class="exp-option">
+                        <input type="radio" id="beginner" name="experience" value="beginner" checked>
+                        <label for="beginner">Beginner</label>
+                    </div>
+                    <div class="exp-option">
+                        <input type="radio" id="intermediate" name="experience" value="intermediate">
+                        <label for="intermediate">Intermediate</label>
+                    </div>
+                    <div class="exp-option">
+                        <input type="radio" id="advanced" name="experience" value="advanced">
+                        <label for="advanced">Advanced</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wallets-section">
+                <label>Which wallets/exchanges do you use? (Select all that apply)</label>
+                <div class="wallets-grid">
+                    <!-- Exchanges -->
+                    <div class="wallet-option">
+                        <input type="checkbox" id="coinbase" name="wallets" value="coinbase">
+                        <label for="coinbase">Coinbase</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="binance" name="wallets" value="binance">
+                        <label for="binance">Binance</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="kraken" name="wallets" value="kraken">
+                        <label for="kraken">Kraken</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="gemini" name="wallets" value="gemini">
+                        <label for="gemini">Gemini</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="crypto_com" name="wallets" value="crypto_com">
+                        <label for="crypto_com">Crypto.com</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="ftx" name="wallets" value="ftx">
+                        <label for="ftx">FTX</label>
+                    </div>
+                    
+                    <!-- Wallets -->
+                    <div class="wallet-option">
+                        <input type="checkbox" id="metamask" name="wallets" value="metamask">
+                        <label for="metamask">MetaMask</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="trustwallet" name="wallets" value="trustwallet">
+                        <label for="trustwallet">Trust Wallet</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="exodus" name="wallets" value="exodus">
+                        <label for="exodus">Exodus</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="phantom" name="wallets" value="phantom">
+                        <label for="phantom">Phantom</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="coinbase_wallet" name="wallets" value="coinbase_wallet">
+                        <label for="coinbase_wallet">Coinbase Wallet</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="ledger" name="wallets" value="ledger">
+                        <label for="ledger">Ledger</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="trezor" name="wallets" value="trezor">
+                        <label for="trezor">Trezor</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="atomic" name="wallets" value="atomic">
+                        <label for="atomic">Atomic</label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="checkbox" id="other_wallet" name="wallets" value="other_wallet">
+                        <label for="other_wallet">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                Submitting... Please wait
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Join CryptoAlpha Signals
+            </button>
+        </form>
+
+        <div class="privacy-note">
+            Join 28,500+ traders. No spam. Unsubscribe anytime.
+        </div>
+    </div>
+<script>
+document.getElementById("cryptoForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  var formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    experience: document.querySelector('input[name="experience"]:checked').value,
+    wallets: Array.from(document.querySelectorAll('input[name="wallets"]:checked')).map(function(w) { return w.value; })
+  };
+
+  var scriptURL = "https://script.google.com/macros/s/AKfycbzCo_BJGCGYDpzYwSwy1aro-zD4hNpaO9lzQxiGbL0W6wvyzbqgADmbgIP0kVs4HiEkjw/exec";
+
+  // Simple fetch
+  fetch(scriptURL, {
+    method: 'POST',
+    body: JSON.stringify(formData)
+  })
+  .then(function(response) { return response.text(); })
+  .then(function(data) {
+    alert("🚀 Welcome to CryptoAlpha! You'll receive trading signals shortly.");
+    document.getElementById("cryptoForm").reset();
+  })
+  .catch(function(error) {
+    alert("Error: " + error);
+  });
+});
+</script>
+</body>
+</html>
+
+
