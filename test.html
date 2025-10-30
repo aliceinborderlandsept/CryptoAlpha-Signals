@@ -3,157 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Premium Access - Trading View Community</title>
+    <title>Free Premium Access</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .container {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            padding: 30px;
-            max-width: 450px;
-            width: 100%;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .header h1 {
-            color: #2a5298;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 1em;
-        }
-
-        .offer-badge {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            text-align: center;
-            margin: 20px 0;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-
-        .benefits {
-            background: #f8f9ff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #2a5298;
-        }
-
-        .benefits h3 {
-            color: #2a5298;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .benefit-item .icon {
-            color: #2a5298;
-            font-weight: bold;
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 600;
-            font-size: 0.95em;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #2a5298;
-            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: #2a5298;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .submit-btn:hover {
-            background: #1e3c72;
-            transform: translateY(-2px);
-        }
-
-        .urgency-note {
-            text-align: center;
-            margin-top: 15px;
-            color: #ff6b6b;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-
-        .privacy-note {
-            text-align: center;
-            margin-top: 15px;
-            color: #666;
-            font-size: 0.8em;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            color: #2a5298;
-            margin: 10px 0;
-        }
+        /* Same CSS as before */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { background: white; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); padding: 30px; max-width: 450px; width: 100%; }
+        .header { text-align: center; margin-bottom: 25px; }
+        .header h1 { color: #2a5298; font-size: 1.8em; margin-bottom: 10px; }
+        .offer-badge { background: linear-gradient(135deg, #ff6b6b, #ff8e8e); color: white; padding: 12px 20px; border-radius: 25px; text-align: center; margin: 20px 0; }
+        .benefits { background: #f8f9ff; border-radius: 10px; padding: 20px; margin: 20px 0; border-left: 4px solid #2a5298; }
+        .form-group { margin-bottom: 20px; }
+        input { width: 100%; padding: 12px 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 15px; }
+        .submit-btn { width: 100%; padding: 15px; background: #2a5298; color: white; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; }
+        .loading { display: none; text-align: center; color: #2a5298; margin: 10px 0; }
     </style>
 </head>
 <body>
@@ -163,65 +26,45 @@
             <p>Limited Time Offer for Trading View Community</p>
         </div>
 
-        <div class="offer-badge">
-            🎯 TOP 10 USERS GET PREMIUM FREE!
-        </div>
+        <div class="offer-badge">🎯 TOP 10 USERS GET PREMIUM FREE!</div>
 
         <div class="benefits">
             <h3>What You'll Get:</h3>
-            <div class="benefit-item">
-                <span class="icon">✓</span> Advanced Trading Indicators
-            </div>
-            <div class="benefit-item">
-                <span class="icon">✓</span> Real-time Market Alerts
-            </div>
-            <div class="benefit-item">
-                <span class="icon">✓</span> Exclusive Trading Strategies
-            </div>
-            <div class="benefit-item">
-                <span class="icon">✓</span> Priority Customer Support
-            </div>
-            <div class="benefit-item">
-                <span class="icon">✓</span> Custom Chart Templates
-            </div>
+            <div>✓ Advanced Trading Indicators</div>
+            <div>✓ Real-time Market Alerts</div>
+            <div>✓ Exclusive Trading Strategies</div>
         </div>
 
         <form id="premiumForm">
             <div class="form-group">
-                <label for="name">Full Name</label>
+                <label>Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label>Email Address</label>
                 <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label>Phone Number</label>
                 <input type="number" id="phone" name="phone" placeholder="Enter phone number" required>
             </div>
 
             <div class="form-group">
-                <label for="tradingview">TradingView Username</label>
+                <label>TradingView Username</label>
                 <input type="text" id="tradingview" name="tradingview" placeholder="Your TradingView username" required>
             </div>
 
-            <div class="loading" id="loading">
-                Submitting... Please wait
-            </div>
+            <div class="loading" id="loading">Submitting... Please wait</div>
 
             <button type="submit" class="submit-btn" id="submitBtn">
                 🎁 CLAIM FREE PREMIUM ACCESS
             </button>
         </form>
 
-        <div class="urgency-note">
-            ⏰ Only 10 Spots Available - First Come, First Served!
-        </div>
-
-        <div class="privacy-note">
-            We respect your privacy. No spam, unsubscribe anytime.
+        <div style="text-align: center; margin-top: 15px; color: #ff6b6b;">
+            ⏰ Only 10 Spots Available!
         </div>
     </div>
 
@@ -238,33 +81,27 @@
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
                 phone: document.getElementById("phone").value,
-                tradingview: document.getElementById("tradingview").value,
-                timestamp: new Date().toISOString()
+                tradingview: document.getElementById("tradingview").value
             };
 
-            // ✅ YAHI APNA GOOGLE SCRIPT URL DALNA HAI
-            const scriptURL = "https://script.google.com/macros/s/AKfycbzCo_BJGCGYDpzYwSwy1aro-zD4hNpaO9lzQxiGbL0W6wvyzbqgADmbgIP0kVs4HiEkjw/exec";
+            // ✅ APNA GOOGLE SCRIPT URL YAHAN DALNA
+            const scriptURL = "https://script.google.com/macros/s/AKfycbx-x5lPpBxRBBoRFShVZf_IXUxFvF85zwCWNeRgNM8gdg0hB7XUALWCwXNdmDzZLt5-/exec";
 
             fetch(scriptURL, {
                 method: 'POST',
                 body: JSON.stringify(formData)
             })
-            .then(function(response) { 
-                return response.text(); 
-            })
-            .then(function(data) {
-                // Hide loading
+            .then(response => response.json())
+            .then(data => {
                 document.getElementById("loading").style.display = "none";
                 document.getElementById("submitBtn").disabled = false;
                 document.getElementById("submitBtn").textContent = "🎁 CLAIM FREE PREMIUM ACCESS";
                 
-                // Success message
-                alert("🎉 Congratulations! You've entered the Premium Access Giveaway. Winners will be notified within 24 hours!");
+                alert("🎉 Congratulations! Your entry has been received.");
                 document.getElementById("premiumForm").reset();
             })
-            .catch(function(error) {
+            .catch(error => {
                 console.error("Error:", error);
-                // Hide loading
                 document.getElementById("loading").style.display = "none";
                 document.getElementById("submitBtn").disabled = false;
                 document.getElementById("submitBtn").textContent = "🎁 CLAIM FREE PREMIUM ACCESS";
